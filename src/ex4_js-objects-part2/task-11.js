@@ -8,6 +8,7 @@ function searchStr(str) {
       result[a] = 1;
     }
   }
+  
   for (var key in result) {
     if (result.hasOwnProperty(key)) {
     console.log(`символ ${key} встречается ${result[key]} раз(а)`)
