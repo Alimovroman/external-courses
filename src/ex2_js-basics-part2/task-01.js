@@ -1,9 +1,9 @@
-function transformArg(a) {
-    if ( a === Number(a) ) {
-        return 'number';
-    } else if ( a === String(a) ){
-        return 'string';
-    }
-    return undefined;
-  };
+function transformArg(arg) {
+  if (typeof arg === `number` && !Number.isNaN(arg)) {
+    return `number`;
+  } else if (typeof arg === `string`) {
+    return `string`;
+  }
+  return undefined;
+};
   module.exports = transformArg;

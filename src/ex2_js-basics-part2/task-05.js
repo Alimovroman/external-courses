@@ -1,5 +1,5 @@
-function searhNumMax(a) {
- let max= Math.max.apply(null,a);
+function searhNumMax(arr) {
+ let max= Math.max.apply(null,arr);
  return max;
 };
 module.exports = searhNumMax;

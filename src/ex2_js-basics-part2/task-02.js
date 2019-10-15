@@ -1,7 +1,7 @@
-function considerCars(a) {
-  for(let i=0; i < a.length; i++) {
-    console.log(a[i]) 
+function considerCars(arr) {
+  for(let i=0; i < arr.length; i++) {
+    console.log(arr[i]) 
   };
-  console.log(a.length) ;
+  console.log(arr.length) ;
 };
 module.exports = considerCars;

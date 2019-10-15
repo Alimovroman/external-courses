@@ -1,21 +1,21 @@
-function checkNum(a) {
-  let x = 0, y = 0, z = 0, arr1 = [];
-    for (let i = 0; i <= a.length; i++) {
-      if (a[i] === null || a[i] === undefined) {
+function checkNum(arg) {
+  let evenElem = 0, oddElem = 0, zeroElem = 0, arr = [];
+    for (let i = 0; i <= arg.length; i++) {
+      if (arg[i] === null || arg[i] === undefined) {
         continue;
       };
 
-      if (a[i] === 0) {
-        z++;
+      if (arg[i] === 0) {
+        zeroElem++;
       } else {
-        if (a[i] % 2 === 1) {
-          y++;
+        if (arg[i] % 2 === 1) {
+          oddElem++;
         } else {
-          x++;
+          evenElem++;
         };
       };
     };
-    arr1.push(x,y,z);
-    return arr1;  
+    arr.push(evenElem, oddElem, zeroElem);
+    return arr;  
 };
 module.exports = checkNum;
