@@ -1,10 +1,10 @@
 function addObject(str, obj) {
-  let added = obj;
+  let newObj = obj;
   if (str in obj) {
-    return added[str];
+    return newObj[str];
   }
 
-  added[str] = "new";
-  return(added.str);
+  newObj[str] = "new";
+  return(newObj.str);
 };
 module.exports = addObject;
