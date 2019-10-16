@@ -1,11 +1,11 @@
 function searchStr(str) {
   let result = {}, arr = str.split('');
   for (let i = 0; i < arr.length; i++) {
-    let a = arr[i];
-    if ( result[a] !== undefined) {
-      result[a]++;
+    let symbol = arr[i];
+    if ( result[symbol] !== undefined) {
+      result[symbol]++;
     }else {
-      result[a] = 1;
+      result[symbol] = 1;
     }
   }
   for (var key in result) {

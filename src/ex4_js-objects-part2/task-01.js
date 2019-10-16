@@ -1,9 +1,9 @@
 obj = Object.create();
-function searchProp(a, obj) {
+function searchProp(nameProp, obj) {
   let x = Object.keys(obj) ;
   for (let i = 0; i < x.length; i++) {
-    if ( x[i] === a) { 
-       console.log(a);
+    if ( x[i] === nameProp) { 
+       console.log(nameProp);
     }
   } return
 };
