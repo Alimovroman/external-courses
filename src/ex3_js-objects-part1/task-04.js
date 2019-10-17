@@ -3,6 +3,7 @@ function addObject(str, obj) {
   if (str in obj) {
     return newObj[str];
   }
+  
   newObj[str] = "new";
   return(newObj.str);
 };
