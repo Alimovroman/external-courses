@@ -7,4 +7,5 @@ function addObject(str, obj) {
   newObj[str] = "new";
   return(newObj.str);
 };
+
 module.exports = addObject;
