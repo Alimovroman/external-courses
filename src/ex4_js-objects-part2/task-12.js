@@ -3,4 +3,4 @@ function sumAndRound(num1, num2) {
     sum = (num1 + num2).toFixed(3);
     return Number(sum);
 };
-module.exports = sumAndRound;
+module.exports = sumAndRound
