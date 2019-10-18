@@ -6,4 +6,5 @@ function converStrCamel(str) {
   }
   return newStr;
 };
+
 module.exports = converStrCamel;

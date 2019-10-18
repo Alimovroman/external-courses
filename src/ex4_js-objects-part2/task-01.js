@@ -7,4 +7,5 @@ function searchProp(nameProp, obj) {
     }
   } return
 };
+
 module.exports = searchProp;

@@ -4,4 +4,5 @@ function addStr(str1, str2, num) {
   let newStr = arr.join(" ")
   return newStr;
 };
+
 module.exports = addStr;

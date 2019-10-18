@@ -6,4 +6,5 @@ function checkLengthStr(str, num) {
   } 
     return str;
 };
+
 module.exports = checkLengthStr;

@@ -4,4 +4,5 @@ function searchStr(str1, str2) {
   }
     return false;
 };
+
 module.exports = searchStr;

@@ -3,4 +3,5 @@ function returnInvertedStr(str) {
   newStr = str.split('').reverse().join('');
   return newStr;
 };
+
 module.exports = returnInvertedStr;

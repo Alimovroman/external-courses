@@ -8,4 +8,5 @@ function uppStr(str) {
   }
   return newStr.trim();
 };
+
 module.exports = uppStr;
