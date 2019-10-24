@@ -1,5 +1,5 @@
 function returnRandom(min, max) {
-  let resultRandom = (min + Math.random() * (max - min)).toFixed(0);
+  let resultRandom = (min + Math.random() * (max - min));
   return Math.round(resultRandom);
 };
 module.exports = returnRandom;
