@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto;
+  width: 550px;
+}
+#table {
+  border-collapse: collapse;
+}
+.line:nth-of-type(odd) {
+  background: rgb(109, 152, 163);
+}
+.line:nth-of-type(even) {
+  background: rgb(139, 179, 189);
+}
+.line:hover {
+  background: rgb(73, 152, 172);
+}
+

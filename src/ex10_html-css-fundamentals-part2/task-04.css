@@ -1,0 +1,243 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  margin-right: 210px;
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+.info li{
+  border-left: 1px solid #bcbec3;
+  padding: 30px;
+}
+.info li:nth-child(1) {
+  background: url('img/phonenamber.png') no-repeat center center;
+  border: none;
+}
+.info li:nth-child(2) {
+  background: url('img/icon1.png') no-repeat center center;
+}
+.info li:nth-child(3) {
+  background: url('img/message.png') no-repeat center center;
+}
+.info li div {
+  display: none;
+}
+.info li:hover div {
+  display: block;
+} .info li div {
+  position: absolute;
+  left: 50px;
+  bottom: 70px;
+  border: solid 1px  #eceef4;
+  width: 165px;
+  text-align: center;
+}
+
+.logo {
+  width:403px;
+  height: 93px;
+  padding-top: 20px;
+  background: url("img/logo.png") no-repeat;
+  text-align: center;
+  font-size: 41px;
+  color: #3687c4;
+}
+nav {
+ 
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid #eceef4;
+ 
+}
+input[type="search"] {
+  border: none;
+  padding-left: 220px;
+  background: url("img/search.png") no-repeat center center ;
+}
+.nav_bar {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav_bar li {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #eceef4;
+  border-left: none;
+  padding: 25px 20px;
+  justify-content: center;
+}
+.nav_bar li:last-child {
+  border-right: none;
+}
+.nav_bar a {
+  color: #6d6e71;
+  text-decoration: none;
+}
+#home {
+  color: #1faae2;
+  margin: 0;
+  padding-bottom:27px;
+  background: url('img/active.png') no-repeat center bottom; 
+}
+main {
+  margin-top: 0px;
+  background-image: url("img/iback.png");
+  height: 885px;
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 155px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.15);
+  position: relative;
+}
+.content h2 {
+  position: absolute;
+  top: 35px;
+  left: 375px;
+  margin: 0;
+  font-size: 58px;
+  text-transform: uppercase;
+}
+.content p {
+  margin: 0;
+  font-size: 45px;
+}
+.and {
+  color: #bbedff;
+  font-size: 150px;
+  
+}
+.pictures {
+  display: inline-block;
+  position: absolute;
+  right: 110px;
+  bottom: 96px;
+}
+.pictures a {
+  margin: -2px;
+}
+.like_1, .like_2 {
+  position: absolute;
+  right: 430px;
+  bottom: 87px;
+  height: 65px;
+  width: 322px;
+  z-index: 10;
+  font-size: 14px;
+  background: #8aca51 url("img/heart.png") no-repeat  110px  18px;
+}
+.like_2 {
+  right: 108px;
+  background: #feeb75 url("img/heart_grey.png") no-repeat 110px 18px;
+
+}
+.like_1 a, .like_2 a {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 23px;
+  padding-left: 155px;
+  color: white
+}
+.like_2 a {
+  color: #cc9800;
+}
+.arrow {
+  position: absolute;
+  right: 0;
+  bottom: 101px;
+  width:111px;
+  height: 241px;
+  background: #f4f4f4;
+  text-align: center;
+}
+.arrow a{
+  text-decoration: none;
+  color: #d4d4d4;
+  font-size: 65px;
+  font-weight: bold;
+  padding-top: 80px;
+  display: inline-block;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+footer p{
+  width: 386px;
+}
+footer h2 {
+  font-size: 26px;
+}
+.isama, .exist {
+  width: 400px;
+  color: #6d6e71;
+  line-height: 24px;
+}
+.isama {
+  background: url("img/icon.png") no-repeat ;
+}.isama p, .isama h2 {
+  padding-left: 110px;
+}
+.exist {
+  background: url("img/wood.png") no-repeat   ;
+}
+.exist p, .exist h2 {
+  padding-left: 130px;
+} 
+
+@media (max-width: 1150px) {
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+  }
+  .logo {
+    padding-bottom: 40px;
+    width: 120px;
+    height: 20px;
+    margin-left:450px;
+    margin-top: 15px;
+  }
+  .info {
+    display: none;
+  }
+  nav {
+    border: none;
+  }
+  .nav_bar {
+    display: none;
+  }
+  input[type="search"] {
+    margin-right:10px;
+  }
+  .pictures, .like_1, .like_2, .arrow {
+    display: none;
+  }
+  .content {
+    top: 250px;
+  }
+  .content h2{
+    left: 200px;
+  }
+  footer {
+    flex-direction: column;
+    margin-left: 130px;
+  }
+  footer p{
+  width: 600px;
+  }
+  .isama {
+    padding-left: 25px;
+  }
+}
