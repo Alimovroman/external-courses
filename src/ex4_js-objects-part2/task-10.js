@@ -1,7 +1,5 @@
 function returnInvertedStr(str) {
-  let newStr = "";
-  newStr = str.split('').reverse().join('');
-  return newStr;
+  return str.split('').reverse().join('');
 };
 
 module.exports = returnInvertedStr;

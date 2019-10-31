@@ -1,6 +1,5 @@
 function delGap(str) {
-let str1 = str.trim();
-return str1
+  return str.trim();
 };
 
 module.exports = delGap;

@@ -1,11 +1,9 @@
-obj = Object.create();
 function searchProp(nameProp, obj) {
-  let x = Object.keys(obj) ;
-  for (let i = 0; i < x.length; i++) {
-    if ( x[i] === nameProp) { 
-       console.log(nameProp);
+  for(let key in obj) {
+    if(!obj.hasOwnProperty(nameProp) && key === nameProp) {
+      return obj[key];
     }
-  } return
+  } return undefined;
 };
 
 module.exports = searchProp;

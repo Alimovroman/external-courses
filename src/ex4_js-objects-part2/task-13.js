@@ -1,5 +1,4 @@
 function returnRandom() {
-  let resultRandom = (Math.random().toFixed(2)) * 100;
-  return resultRandom;
+  return ((Math.random().toFixed(2)) * 100);
 };
 module.exports = returnRandom;
