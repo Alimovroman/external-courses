@@ -1,0 +1,119 @@
+
+.loader {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.loader:before, .loader:after {
+  content: '';
+  height: 40px;
+  width: 40px;
+  border: 8px solid rgba(97, 19, 19, 0.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  animation: animate 2s infinite linear;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0) skew(0);  
+  }
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+.loader:after {
+  animation: animate2 2s infinite linear;
+}
+@keyframes animate2 {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+  100% {
+    transform: rotate(180deg) skew(-360deg)
+  }
+}
+
+.conteiner {
+ width: 200px;
+ height: 300px;
+ display: flex;
+ justify-content: space-between;
+ flex-direction: column;
+}
+.block {
+  border: 2px solid black;
+}
+.ball {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background: rgb(35, 85, 52);
+  animation: bounce 1s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    bottom: 86%;
+  }
+  25% {
+    bottom: 62%;
+    width: 100px;
+    height: 100px;
+  }
+  30% {
+      bottom: 62%;
+      width: 100px;
+      height: 100px;
+  }
+  70% {
+    bottom: 86%;
+  }
+  100% {
+    bottom: 86%;
+  } 
+}
+.infinityAnimation {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 100px;
+  height: 100px;
+  border: 1px solid grey;
+  border-radius: 100%;
+  animation: trash 3s linear infinite;
+}
+@keyframes trash{
+  0% {
+    background: linear-gradient(to bottom, rgb(85, 52, 52), rgb(35, 72, 77));
+  }
+  20% {
+    border-radius: 0;
+    background: linear-gradient(to bottom, rgb(85, 52, 52), rgb(35, 72, 77));
+  }
+  35% {
+    border-radius: 0;
+    background: linear-gradient(to left, rgb(112, 161, 159), rgb(160, 185, 46))
+  }
+  50% {
+    border-radius: 0;
+    transform: skew(15deg, 15deg) scale(0.7, 0.5);
+  }
+  70% {
+    border-radius: 0;
+    transform: rotate(720deg);
+  }
+  85% {
+    border-radius: 0;
+    background: linear-gradient(to right, rgb(138, 58, 121), rgb(180, 117, 58));
+  }
+  100% {
+    border-radius: 100%;
+    background: linear-gradient(to right, rgb(138, 58, 121), rgb(180, 117, 58));
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset = "utf-8">
+  <title>task-02</title>
+  <style>
+    .field {
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+    }
+    label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all .2s linear;
+      color: #999;
+      font-size: 10px;
+    }
+    input {
+      margin-top: 15px;
+      border: 1px solid #999;
+      padding: 3px 2px;
+    }
+    input:invalid + label {
+        top: 3px;
+        opacity: 0;
+    }
+    input:valid + label {
+      opacity: 1;
+      top: 0;
+    }
+    input:focus {
+      outline: none;
+    }
+    input:focus + label {
+      color: #33A;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div class="field">
+      <input type="text" placeholder="Title" required>
+      <label>title</label>
+    </div>
+
+    <div class="field">
+     <input type="text" placeholder="Price" required>
+     <label>price</label>
+    </div>
+
+    <div class="field">
+      <input type="text" placeholder="Specific Location (Optional)" required>
+      <label>Specific Location (Optional)</label>
+    </div>
+
+    <div class="field">
+      <input type="text" placeholder="Descreption" required>
+      <label>descreption</label>
+    </div>
+  </form>
+</body>
+</html>
