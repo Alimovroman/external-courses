@@ -1,0 +1,29 @@
+body {
+  margin: 0 auto;
+  width: 400px;
+}
+main {
+  margin-top: 100px;
+  display:flex;
+  align-items: center;
+}
+.left, .right {
+  height: 40px;
+  width:25px;
+}
+.left:hover, .right:hover, .left:focus, .right:focus {
+  cursor: pointer;
+  outline: 1px solid rgb(126, 57, 57);
+  background: rgb(147, 109, 168);
+  color: white;
+  box-shadow: 0 0 10px rgb(147, 109, 168);
+  border:none;
+  transform: scaleY(1.4);
+}
+#scr {
+  margin: 20px;
+  padding: 5px;
+  width: 300px;
+  height: 460px;
+  border: 5px solid grey;
+}
