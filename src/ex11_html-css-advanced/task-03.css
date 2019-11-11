@@ -12,21 +12,21 @@ header{
   align-items: center;
   background: #0067A3;
 }
-.logo_name {
+.logoName {
   margin-left: 15px;
   display: flex;
   align-items: center;
   flex: 5;
 }
-.logo_text {
+.logoText {
   text-transform: capitalize;
   color: white;
   font-size: 28px;
 }
-.cont_for_create_list {
+.createList {
   flex: 1;
 }
-.create_new_list {
+.createNewList[type="button"] {
   width: 181px;
   height: 33px;
   background: white url(img/add.png) no-repeat 4% center;
@@ -34,7 +34,7 @@ header{
   padding-left: 20px;
   border-radius: 5px;
 }
-.user_name {
+.userName {
   text-align: end;
   padding-top: 20px;
   width: 64px;
@@ -53,15 +53,12 @@ header{
   color: white;
     
 }
-.active{
-  flex:1;
-  margin-left: 60px;
+.footerInfo {
+  display: flex;
+  justify-content: space-around;
+  flex: 2;
 }
-.finished{
-  flex:1;
-  margin-left: -55px;
-}
-.board_by_acc{
+.boardByAcc{
   display: flex;
   flex: 5; 
   justify-content: flex-end;
