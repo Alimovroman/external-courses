@@ -13,7 +13,6 @@ button {
   position: relative;    
 }
 button:before {
-    content: "&#10031";
     position: absolute;
     border: 2px solid rgb(119, 116, 111);
     border-radius: 14px;
