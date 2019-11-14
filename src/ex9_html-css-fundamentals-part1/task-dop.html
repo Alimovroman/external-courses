@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset = "utf-8">
+  <title>task-dop</title>
+  <link rel="stylesheet" href="task-dop.css">
+  <style>
+  
+  </style>    
+</head>
+<body>
+  <form>
+    <p class="head">Form here</p>
+    <p class="litleText">*reqauired fields</p>
+    <hr>
+    <p>
+      <label for="name" class="label">Name:</label>
+      <input type="text" name="name" id="name" placeholder="Введите Имя" required>
+    </p>
+    <p>
+      <label for="email" class="label">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Ввудите Вашу Почту" required>
+      <span class="formError">Введите Email</span>
+    </p>
+    <p>
+      <label for="website" class="label">Website:</label>
+      <input type="url" name="website" id="website" placeholder="Введите Website">
+      <span class="formError">Введите URL</span>
+    </p>
+    <p>
+      <label class="label" id="message">Message:</label>
+      <textarea name="message" cols="30" rows="4" id="texatea"></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Отправить">
+    </p>
+  </form>
+</body>
+</html>
