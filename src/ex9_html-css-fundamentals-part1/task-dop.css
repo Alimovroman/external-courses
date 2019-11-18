@@ -1,0 +1,45 @@
+body {
+  width: 560px;
+  margin: 0 auto;
+}
+form {
+  font-size: 15px;
+}
+.head {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom:0;
+  position: relative;
+  top: 14px;
+}
+.litleText {
+  font-size: 10px;
+  color: red;
+  margin-bottom: 0;
+}
+.label {
+  display: inline-block;
+  width: 70px;
+  vertical-align: top;
+}
+.formError {
+  width: 7em;
+  background: red;
+  color: white;
+  display:block;
+  display:none;
+  margin-left: 3px;
+  position: relative;
+  left: 260px;
+  bottom: 18px;
+}
+input:invalid:not(:placeholder-shown) +
+.formError {
+  display:block;
+}
+input[type="submit"] {
+  padding: 8px 20px;
+  margin-left: 45px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
