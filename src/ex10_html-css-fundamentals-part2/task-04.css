@@ -1,42 +1,46 @@
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
 .heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .info {
-  margin-right: 210px;
-  list-style: none;
   display: flex;
   position: relative;
 }
-.info li{
-  border-left: 1px solid #bcbec3;
-  padding: 30px;
+.blockInfo {
+  position: relative;
+  border-left: 1px solid #eceef4;
+  padding: 18px;
 }
-.info li:nth-child(1) {
-  background: url('img/phonenamber.png') no-repeat center center;
-  border: none;
-}
-.info li:nth-child(2) {
-  background: url('img/icon1.png') no-repeat center center;
-}
-.info li:nth-child(3) {
-  background: url('img/message.png') no-repeat center center;
-}
-.info li div {
+.iconText, .textMail {
   display: none;
-}
-.info li:hover div {
-  display: block;
-} .info li div {
   position: absolute;
-  left: 50px;
-  bottom: 70px;
-  border: solid 1px  #eceef4;
-  width: 165px;
+  bottom: 45px;
+  left: -50px;
+  border: 1px solid #eceef4;
+  height: 25px;
   text-align: center;
+  width: 165px;
+  padding-top: 5px;
+  color: #6d6e71;
+  border-radius: 5px;
 }
-
+.blockInfo:hover .iconText {
+  display: block;
+}
+.blockInfo:hover {
+  color: #1faae2;
+}
+.phoneNumber {
+  border-left: none;
+}
 .logo {
   width:403px;
   height: 93px;
@@ -47,12 +51,10 @@
   color: #3687c4;
 }
 nav {
- 
   display: flex;
   justify-content: center;
   width: 100%;
   border-top: 1px solid #eceef4;
- 
 }
 input[type="search"] {
   border: none;
@@ -81,7 +83,7 @@ input[type="search"] {
   color: #6d6e71;
   text-decoration: none;
 }
-#home {
+.nav_bar li a:hover {
   color: #1faae2;
   margin: 0;
   padding-bottom:27px;
@@ -116,31 +118,27 @@ main {
 .and {
   color: #bbedff;
   font-size: 150px;
-  
 }
 .pictures {
-  display: inline-block;
+  display: flex;
   position: absolute;
-  right: 110px;
-  bottom: 96px;
-}
-.pictures a {
-  margin: -2px;
+  right: 111px;
+  bottom: 123px;
 }
 .like_1, .like_2 {
   position: absolute;
-  right: 430px;
-  bottom: 87px;
+  right: 433px;
+  bottom: 109px;
   height: 65px;
   width: 322px;
   z-index: 10;
   font-size: 14px;
-  background: #8aca51 url("img/heart.png") no-repeat  110px  18px;
+  background: #89ca51bb url("img/heart.png") no-repeat  110px  18px;
 }
 .like_2 {
-  right: 108px;
-  background: #feeb75 url("img/heart_grey.png") no-repeat 110px 18px;
-
+  margin-left: 0;
+  right: 111px;
+  background: #feec75b9 url("img/heart_grey.png") no-repeat 110px 18px;
 }
 .like_1 a, .like_2 a {
   display: inline-block;
@@ -152,14 +150,20 @@ main {
 .like_2 a {
   color: #cc9800;
 }
+.like_1:hover, .like_2:hover {
+  background: #a39073 url("img/heart_grey.png") no-repeat 110px 18px;
+}
 .arrow {
   position: absolute;
   right: 0;
-  bottom: 101px;
+  bottom: 123px;
   width:111px;
   height: 241px;
   background: #f4f4f4;
   text-align: center;
+}
+.arrow:hover {
+  background: #a39073;
 }
 .arrow a{
   text-decoration: none;
@@ -195,31 +199,33 @@ footer h2 {
 .exist p, .exist h2 {
   padding-left: 130px;
 } 
-
 @media (max-width: 1150px) {
   header {
     height: 100px;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
   }
   .logo {
+    margin-left: 40px;
     padding-bottom: 40px;
     width: 120px;
     height: 20px;
-    margin-left:450px;
-    margin-top: 15px;
+    justify-content: center;
   }
   .info {
     display: none;
   }
   nav {
     border: none;
+    align-items: center;
+    justify-content: flex-end;
   }
   .nav_bar {
     display: none;
   }
   input[type="search"] {
-    margin-right:10px;
+    height: 40px;
   }
   .pictures, .like_1, .like_2, .arrow {
     display: none;
