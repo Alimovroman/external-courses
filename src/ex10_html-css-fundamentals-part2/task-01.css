@@ -1,0 +1,17 @@
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.rim {
+  width: 250px;
+  -webkit-mask-image: url(https://avatanplus.com/files/resources/original/5759225794837155342e2638.png);
+  -webkit-mask-size: 250px;
+
+}
+.rabbit{
+    width: 350px;
+    height: 350px;
+    -webkit-mask-image: url(https://avatanplus.com/files/resources/original/5714ea97570d115429b45f3d.png);
+    -webkit-mask-size: 350px;
+}
