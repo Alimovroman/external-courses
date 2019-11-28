@@ -8,3 +8,4 @@ function openList() {
     document.getElementsByClassName(`arrow`)[0].style.transform = "rotate(90deg)";
   }
 };
+document.querySelector(`.arrow`).addEventListener(`click`, openList);

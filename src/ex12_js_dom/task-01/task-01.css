@@ -10,9 +10,12 @@ main {
 .left, .right {
   height: 40px;
   width:25px;
-}
-.left:hover, .right:hover, .left:focus, .right:focus {
   cursor: pointer;
+}
+.left:hover,
+.right:hover,
+.left:focus,
+.right:focus {
   outline: 1px solid rgb(126, 57, 57);
   background: rgb(147, 109, 168);
   color: white;
@@ -20,7 +23,7 @@ main {
   border:none;
   transform: scaleY(1.4);
 }
-#scr {
+#screen {
   margin: 20px;
   padding: 5px;
   width: 300px;
