@@ -7,15 +7,15 @@ main {
   display:flex;
   align-items: center;
 }
-.left, .right {
+.back, .next {
   height: 40px;
   width:25px;
   cursor: pointer;
 }
-.left:hover,
-.right:hover,
-.left:focus,
-.right:focus {
+.back:hover,
+.next:hover,
+.back:focus,
+.next:focus {
   outline: 1px solid rgb(126, 57, 57);
   background: rgb(147, 109, 168);
   color: white;

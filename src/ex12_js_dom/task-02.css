@@ -1,10 +1,13 @@
 html {
   height: 100%;
+  width: 100%;
 }
 body {
-  position: relative;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0;
 }
 header{
@@ -54,23 +57,28 @@ header{
 .arrow:hover {
   cursor: pointer;
 }
-.select {
-  margin-left: -90px;
+.menuContainer {
+  margin-top: 15px;
+  margin-left: -51px;
 }
-.selectList {
-  width: 9em;
-  height: 9em;
+.menu {
+  padding: 2px;
+  width: 7em;
+  height: 9.5em;
   font-size: 18px;
   background: #EBECF0;
-  border-radius: 5px;
+  border-radius: 10px;
+  list-style-type: none;
 }
-.option {
+.menuList {
+  text-align: center;
   margin: 8px;
-  padding: 4px;
+  padding: 6px;
   border-radius: 5px;
   background: white;
+  text-decoration: none;
 }
-.option:hover {
+.menuList:hover {
   background: #0067A3;
   color: white;
   cursor: pointer;
@@ -79,20 +87,17 @@ header{
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: absolute;
-  bottom: 0;
   background: #0067A3;
   color: white;
-    
 }
 .footerInfo {
   display: flex;
   justify-content: space-around;
-  flex: 2;
+  flex: 1;
 }
-.boardByAcc{
+.kanbanBoard{
   display: flex;
-  flex: 5; 
+  flex: 2;
   justify-content: flex-end;
   padding-right: 15px;
 }
