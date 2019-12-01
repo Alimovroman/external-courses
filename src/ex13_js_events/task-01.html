@@ -8,29 +8,23 @@
 <body>
   <header>
     <div class="logoName"> 
-      <div>
-        <img class="logo" src="img/Slice_7.png" alt="logo">
-      </div>
+      <img class="logo" src="img/Slice_7.png" alt="logo">
       <div class="logoText">
-        <p>awesome kanban board<p>    
+        awesome kanban board
       </div>
     </div>
-    <div class="createList">
-      <input class="createNewList" type="button" value="Create new list">
-    </div>
-    <div class="userName">
-      <button class="arrow" onclick="openList()">></button>
-      <p class="select"><select class="selectList" onclick="openList()" multiple>
-        <option class="option">My account</option>
-        <option class="option">My task</option>
-        <option class="option">Setting</option>
-        <option class="option">Log out</option>
-      </select></p>
+    <div class="userOperations">
+      <button class="addBtn">Create new list</button>
+      <div class="userName">
+        <button class="arrow">></button>
+        <div class="menuContainer">
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="block">
+    <div class="taskBlock">
       <div class="headline">
         <p>backlog</p>
         <button class="blockInfo">...</button>
@@ -40,7 +34,7 @@
       <button class="addCard backlogButton">+ add card</button>
     </div>
 
-    <div class="block">
+    <div class="taskBlock">
       <div class="headline">
         <p>ready</p>
         <button class="blockInfo">...</button>
@@ -50,7 +44,7 @@
       <button class="addCard readyButton">+ add card</button>
     </div>
 
-    <div class="block">
+    <div class="taskBlock">
       <div class="headline">
         <p>in progress</p>
         <button class="blockInfo">...</button>
@@ -60,7 +54,7 @@
       <button class="addCard progressButton">+ add card</button>
     </div>
 
-    <div class="block">
+    <div class="taskBlock">
       <div class="headline">
         <p>finished</p>
         <button class="blockInfo">...</button>
@@ -73,10 +67,10 @@
 
   <footer class="footer">
     <div class="footerInfo">
-        <div class="active"><p>Active tasks: &lt;N&gt;</p></div>
-        <div class="finished"><p>Finished tasks: &lt;M&gt;</p></div>
+      <div class="active"><p>Active tasks: &lt;N&gt;</p></div>
+      <div class="finished"><p>Finished tasks: &lt;M&gt;</p></div>
     </div>
-    <div class ="boardByAcc"><p>Kanban board by Roman, 2019</p></div>
+    <div class ="kanbanBoard"><p>Kanban board by Roman, 2019</p></div>
   </footer>
   <script src="task-01.js"></script>
 </body>

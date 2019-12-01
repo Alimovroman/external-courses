@@ -3,13 +3,15 @@ html {
   width: 100%;
 }
 body {
-  margin: 0;
-  position: relative;
   height: 100%;
   width: 100%;
-  background:rgb(2, 118, 185);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
 }
 header{
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,17 +21,20 @@ header{
   margin-left: 15px;
   display: flex;
   align-items: center;
-  flex: 5;
+  flex:2;
 }
 .logoText {
   text-transform: capitalize;
   color: white;
   font-size: 28px;
 }
-.createList {
-  flex: 1;
+.userOperations {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex:1;
 }
-.createNewList[type="button"] {
+.addBtn {
   width: 181px;
   height: 33px;
   background: white url(img/add.png) no-repeat 4% center;
@@ -56,45 +61,45 @@ header{
 .arrow:hover {
   cursor: pointer;
 }
-.select {
-  margin-left: -90px;
+.menuContainer {
+  margin-top: 15px;
 }
-.selectList {
-  width: 9em;
-  height: 9em;
+.menu {
+  padding: 2px;
+  width: 7em;
+  height: 9.5em;
   font-size: 18px;
-  background: #EBECF0;
-  border-radius: 5px;
+  background: rgb(172, 173, 175);
+  border-radius: 10px;
+  list-style-type: none;
 }
-.selectList:not(:first-child) {
-  border: none;
-  width: 280px;
-}
-.option {
+.menuList {
+  text-align: center;
   margin: 8px;
-  padding: 4px;
+  padding: 6px;
   border-radius: 5px;
   background: white;
+  text-decoration: none;
 }
-.option:hover {
+.menuList:hover {
   background: #0067A3;
   color: white;
   cursor: pointer;
 }
 main {
+  height: 100%;
   display: flex;
+  align-items: flex-start;
   justify-content: space-around;
   background:rgb(2, 118, 185);
 }
-.block {
-  min-width: 290px;
-  max-width: 290px;
+.taskBlock {
+  width: 290px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   background: #EBECF0;
-  border-radius: 10px;
-  height: 100%;
+  border-radius: 10px; 
 }
 .headline {
   width: 282px;
@@ -134,7 +139,7 @@ main {
 .addCard:active {
   background: rgb(211, 217, 240);
 }
-.finishedLi, .addTask, .readyLi, .progressLi {
+.listTask {
   list-style-type: none;
   width: 258px;
   font-size: 18px;
@@ -145,7 +150,7 @@ main {
   padding-left: 10px;
   cursor: pointer;
 }
-.finishedLi:hover, .addTask:hover , .readyLi:hover , .progressLi:hover {
+.listTask:hover {
   background: #0067A3;
   color: white;
 }
@@ -153,19 +158,17 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: absolute;
-  bottom: 0;
   background: #0067A3;
   color: white;
 }
 .footerInfo {
   display: flex;
   justify-content: space-around;
-  flex: 2;
+  flex: 1;
 }
-.boardByAcc{
+.kanbanBoard{
   display: flex;
-  flex: 5; 
+  flex: 2;
   justify-content: flex-end;
   padding-right: 15px;
 }

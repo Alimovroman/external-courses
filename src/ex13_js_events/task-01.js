@@ -1,6 +1,11 @@
-let select = document.getElementsByClassName("select");
+let select = document.getElementsByClassName("menuContainer");
+select[0].innerHTML = `<ul class="menu">
+<li class="menuList">My account</li>
+<li class="menuList">My task</li>
+<li class="menuList">Setting</li>
+<li class="menuList">Log out</li>
+</ul>`;
 select[0].hidden = true;
-
 function openList() {
   select[0].hidden = !select[0].hidden;
   document.getElementsByClassName(`arrow`)[0].style.transform = "rotate(-90deg)" ;
@@ -8,103 +13,101 @@ function openList() {
     document.getElementsByClassName(`arrow`)[0].style.transform = "rotate(90deg)";
   }
 };
+document.querySelector(`.arrow`).addEventListener(`click`, openList);
+document.querySelector(`.menu`).addEventListener(`click`, openList);
 
 let backlogContainer = document.getElementsByClassName(`backlogContainer`);
-let taskUl = document.createElement(`ul`);
-taskUl.className = (`taskUl`);
-backlogContainer[0].append(taskUl);
+let backlogTask = document.createElement(`ul`);
+backlogContainer[0].append(backlogTask);
 
 let readyContainer = document.getElementsByClassName(`readyContainer`);
-let readyUl = document.createElement(`ul`);
-readyUl.className = (`readyUl`);
-readyContainer[0].append(readyUl);
+let readyTask = document.createElement(`ul`);
+readyContainer[0].append(readyTask);
 
 let progressContainer = document.getElementsByClassName(`progressContainer`);
-let progressUl = document.createElement(`ul`);
-progressUl.className = (`progressUl`)
-progressContainer[0].append(progressUl);
+let progressTask = document.createElement(`ul`);
+progressContainer[0].append(progressTask);
 
 let finishedContainer = document.getElementsByClassName(`finishedContainer`);
-let finishedUl = document.createElement(`ul`);
-finishedUl.className = (`finishedUl`);
-finishedContainer[0].append(finishedUl);
+let finishedTask = document.createElement(`ul`);
+finishedContainer[0].append(finishedTask);
 
 let backlog = document.getElementsByClassName('backlogButton');
-backlog[0].addEventListener(`click`, addBacklog);
+backlog[0].addEventListener(`click`, addTask);
 let ready = document.getElementsByClassName(`readyButton`);
 let progress = document.getElementsByClassName(`progressButton`);
 let finished = document.getElementsByClassName(`finishedButton`);
 
 function checkButton() {
-  if (progressUl.childNodes.length === 0) {
+  if (progressTask.childNodes.length === 0) {
     finished[0].disabled = true;
     } else { finished[0].disabled = false;
   };
-  if (readyUl.childNodes.length === 0) {
+  if (readyTask.childNodes.length === 0) {
     progress[0].disabled = true;
     } else { progress[0].disabled = false;
   } 
-  if (taskUl.childNodes.length === 0) {
+  if (backlogTask.childNodes.length === 0) {
     ready[0].disabled = true;
     } else {
     ready[0].disabled = false;
   }  
 };
 checkButton();
-function addBacklog() {
+function addTask() {
   let namelist = prompt(`введите название задачи`,``);
   if (namelist === null) return;
   if (namelist !== ``) {
-    let addTask = document.createElement(`li`);
-    addTask.className = (`addTask`);
-    addTask.innerHTML = `${namelist}`;
-    taskUl.append(addTask);
-    localStorage.setItem(`task`,addTask);
+    let backlogList = document.createElement(`li`);
+    backlogList.className = (`listTask`);
+    backlogList.innerHTML = `${namelist}`;
+    backlogTask.append(backlogList);
+    localStorage.setItem(`task`,backlogTask);
     checkButton();
   } return
 };
 
 ready[0].onclick = function() {
-  taskUl.addEventListener(`click`, moveInReady);
+  backlogTask.addEventListener(`click`, moveInReady);
 };
 function moveInReady(event) {
   let target = event.target;
-    let readyLi = document.createElement(`li`);
-    readyLi.className = (`readyLi`)
-    readyLi.innerHTML = `${target.textContent}`;
-    readyUl.append(readyLi);
-    localStorage.setItem(`task2`,readyLi);
+    let readyList = document.createElement(`li`);
+    readyList.className = (`listTask`)
+    readyList.innerHTML = `${target.textContent}`;
+    readyTask.append(readyList);
+    localStorage.setItem(`task2`,readyList);
     target.remove();
     checkButton();
-    taskUl.removeEventListener(`click`, moveInReady);
+    backlogTask.removeEventListener(`click`, moveInReady);
 };
 
 progress[0].onclick = function() {
-  readyUl.addEventListener(`click`,moveInProgress);
+  readyTask.addEventListener(`click`,moveInProgress);
 };
 function moveInProgress(event) {
   let targetReady = event.target;
-  let progressLi = document.createElement(`li`);
-  progressLi.className = (`progressLi`);
-  progressLi.innerHTML = `${targetReady.textContent}`;
-  progressUl.append(progressLi);
-  localStorage.setItem(`task3`,progressLi);
+  let progressList = document.createElement(`li`);
+  progressList.className = (`listTask`);
+  progressList.innerHTML = `${targetReady.textContent}`;
+  progressTask.append(progressList);
+  localStorage.setItem(`task3`,progressList);
   targetReady.remove();
   checkButton();
-  readyUl.removeEventListener(`click`,moveInProgress);
+  readyTask.removeEventListener(`click`,moveInProgress);
 };
 
 finished[0].onclick = function() {
-  progressUl.addEventListener(`click`, moveInFinished);
+  progressTask.addEventListener(`click`, moveInFinished);
 };
 function moveInFinished(event) {
   let targetFinished = event.target;
-  let finishedLi = document.createElement(`li`);
-  finishedLi.className = (`finishedLi`);
-  finishedLi.innerHTML = (`${targetFinished.textContent}`);
-  finishedUl.append(finishedLi);
-  localStorage.setItem(`task4`,finishedLi);
+  let finishedList = document.createElement(`li`);
+  finishedList.className = (`listTask`);
+  finishedList.innerHTML = (`${targetFinished.textContent}`);
+  finishedTask.append(finishedList);
+  localStorage.setItem(`task4`,finishedList);
   targetFinished.remove();
   checkButton();
-  progressUl.removeEventListener(`click`, moveInFinished);
+  progressTask.removeEventListener(`click`, moveInFinished);
 };
