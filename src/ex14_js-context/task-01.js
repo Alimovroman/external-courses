@@ -25,7 +25,7 @@ function Calculator(){
     return this;
   }
   this.fetchData = function(callback) {
-    this.result = callback(500);
+    setTimeout(() => { this.result = callback(500) }, 1000);
     return this;
   }
   this.reset = function() {
