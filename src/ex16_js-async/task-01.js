@@ -1,6 +1,6 @@
-function myFetch(url, method) {
+function myFetch(url, method = `GET`) {
   let xhr = new XMLHttpRequest();
-  if ( (method === undefined) || (method ===`GET`) ) {
+  if (method ===`GET`) {
     xhr.open(`GET`, url)
     xhr.send();
     xhr.onloadGet = function() {
@@ -8,8 +8,7 @@ function myFetch(url, method) {
         alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
       } return xhr.responseText;
     }
-  }
-  if (method === `POST`) {
+  } else {
     xhr.open(`POST`, url)
     xhr.send([body]);
     xhr.onloadPost = function() {
