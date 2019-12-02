@@ -1,0 +1,103 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0067A3;
+}
+.logoName {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  flex: 5;
+}
+.logoText {
+  text-transform: capitalize;
+  color: white;
+  font-size: 28px;
+}
+.createList {
+  flex: 1;
+}
+.createNewList[type="button"] {
+  width: 181px;
+  height: 33px;
+  background: white url(img/add.png) no-repeat 4% center;
+  font-size: 18px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.userName {
+  text-align: end;
+  padding-top: 20px;
+  width: 64px;
+  height: 40px;
+  margin-right: 15px;
+  background: url("img/Slice_1.png") no-repeat left center;
+  flex: 0 1 64px;
+  position: relative;
+}
+.arrow {
+  transform: rotate(90deg);
+  background: #0067A3;
+  color: white;
+  border: none;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.menuContainer {
+  margin-top: 15px;
+  margin-left: -51px;
+}
+.menu {
+  padding: 2px;
+  width: 7em;
+  height: 9.5em;
+  font-size: 18px;
+  background: #EBECF0;
+  border-radius: 10px;
+  list-style-type: none;
+}
+.menuList {
+  text-align: center;
+  margin: 8px;
+  padding: 6px;
+  border-radius: 5px;
+  background: white;
+  text-decoration: none;
+}
+.menuList:hover {
+  background: #0067A3;
+  color: white;
+  cursor: pointer;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #0067A3;
+  color: white;
+}
+.footerInfo {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+.kanbanBoard{
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+  padding-right: 15px;
+}

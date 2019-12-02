@@ -1,0 +1,32 @@
+body {
+  margin: 0 auto;
+  width: 400px;
+}
+main {
+  margin-top: 100px;
+  display:flex;
+  align-items: center;
+}
+.back, .next {
+  height: 40px;
+  width:25px;
+  cursor: pointer;
+}
+.back:hover,
+.next:hover,
+.back:focus,
+.next:focus {
+  outline: 1px solid rgb(126, 57, 57);
+  background: rgb(147, 109, 168);
+  color: white;
+  box-shadow: 0 0 10px rgb(147, 109, 168);
+  border:none;
+  transform: scaleY(1.4);
+}
+#screen {
+  margin: 20px;
+  padding: 5px;
+  width: 300px;
+  height: 460px;
+  border: 5px solid grey;
+}
